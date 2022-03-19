@@ -1,0 +1,19 @@
+@import "variables";
+@import "mixin";
+@import "header";
+@import "body";
+
+html{
+    box-sizing: border-box;
+    font-size: 100%;
+}
+*, *::before, *::after{
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+body{
+    min-height: 100vh;
+    padding: 6vw;
+
+}

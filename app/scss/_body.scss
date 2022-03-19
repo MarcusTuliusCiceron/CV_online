@@ -1,0 +1,90 @@
+.body{
+    display: flex;
+    gap: 1rem;
+    &__left{
+        display: grid;
+        grid-template-columns: 78% 19%;
+        grid-template-rows: repeat(15, 6vw);
+        grid-template-areas: 
+        "A A"
+        "B C"
+        "D E"
+        "F G"
+        "H I"
+        "J K"
+        "L M"
+        "N N"
+        "O P"
+        "Q R"
+        "S S"
+        "T U"
+        "V W"
+        "X Y"
+        "Z AA";
+        gap: 10px;
+        width: 30%;
+
+        &__title__1{
+            grid-area: A;
+        }
+        &__title__2{
+            grid-area: N;
+        }
+        &__title__3{
+            grid-area: S;
+        }
+        &__title__1, &__title__2, &__title__3{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+        &__logo{
+            background-color: $lightBlue;
+        }
+        &__skill{
+            background-color: $lightBlue;
+            display: flex;
+            align-items: center;
+            color: white;
+            padding: 1rem;
+        }
+    }
+    &__right{
+        width: 70%;
+        display: grid;
+        grid-template-columns: 20% 80%;
+        grid-template-rows: repeat(10, minmax(6vw, auto));
+        grid-template-areas: 
+        "A A"
+        "B C"
+        "D E"
+        "F G"
+        "H I"
+        "J J"
+        "L M"
+        "N N"
+        "O P"
+        "Q R";
+        gap: 10px;
+        &__title__1{
+            grid-area: A;
+        }
+        &__title__2{
+            grid-area: J;
+        }
+        &__title__1, &__title__2{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        &__logo{
+            width: 100%;
+            height: 100%;
+            background-color: $lightGrey
+        }
+        &__experience{
+            background-color: $lightGrey;
+        }
+    }
+}
