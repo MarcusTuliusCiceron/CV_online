@@ -1,63 +1,84 @@
 .header{
     display: flex;
     gap: 2vw;
+    position: relative;
+    @include breakpoint-down(medium){
+        flex-direction: column-reverse;
+        gap: 0;
+    }
     &__left{
-        width: 30%;
+        position: relative;
+        width: calc(30% + 1rem);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        @include breakpoint-down(medium){
+            width: 100%;
+        }
         &__informations{
             &__title{
                 h2{
                     text-align: center;
                     margin-bottom: 1rem;
+                    font-size: 2.5rem;
                 }
             }
             &__text{
                 padding: 1rem;
                 margin-bottom: 1rem;
                 background-color: $lightGrey;
-                p{
-                    
-                }
+                border-radius: 5px;
             }
         }
         &__contact{
+            @include breakpoint-down(medium){
+                margin-bottom: 15px;
+            }
             &__title{
                 h2{
                     text-align: center;
                     margin-bottom: 1rem;
+                    font-size: 2.5rem;
                 }
             }
             &__text{
                 padding: 1rem;
                 background-color: $lightGrey;
-                p{
-                    
-                }
+                border-radius: 5px;
+                position: relative;
+                bottom: 0;
             }
         }
     }
     &__right{
+
         width: 70%;
+        @include breakpoint-down(medium){
+            width: 100%;
+            margin-bottom: 15px;
+        }
         &__title{
             color: white;
             background-color: $lightBlue;
+            border-radius: 5px;
             padding: 2vw;
             margin-bottom: 1rem;
             h1{
                 margin-bottom: 1rem;
+                font-size: 4rem;
             }
             h2{
-                
+                font-size: 2.5rem;
             }
         }
         &__presentation{
             color: white;
             background-color: $lightBlue;
+            border-radius: 5px;
             padding: 2vw;
             h2{
                 margin-bottom: 1rem;
-            }
-            p{
-               
+                font-size: 2.5rem;
             }
         }
     }
